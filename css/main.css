@@ -1,0 +1,70 @@
+body {
+		margin: 0;
+		animation: night 7s linear infinite 0.5s;
+		background-color: #fff;
+	}
+
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 20px;
+	width: 800px;
+	height: 800px;
+	transform: translate(-50%, -50%);
+}
+
+.light {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background-color: yellow;
+}
+
+
+.dark {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background-color: #000;
+	opacity: 1;
+	animation: move 7s cubic-bezier(.31,.03,.25,.67) infinite  alternate;
+}
+
+@keyframes move {
+	
+	0% {
+		transform: translate(0px);
+	}
+
+	50% {
+		transform: translate(-270px);
+
+	}
+
+	100% {
+		display: none;
+		transform: translate(-540px);
+	}
+
+}
+
+@keyframes night {
+
+	0% {
+		background-color: #fff;
+	}
+
+	50% {
+		background-color: #000;
+	}
+
+	100% {
+		background-color: #fff;
+	}
+   
+
+}
